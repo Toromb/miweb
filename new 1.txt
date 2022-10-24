@@ -1,0 +1,72 @@
+- TEST PLAN 
+  -Create en jira 
+     -Proyect = XRAY
+     -Issue Type = Test Plan
+  -General
+     -Summary = Test plan - BFC - First round
+     -Assignee = vos (si lo vas hacer vos) *no es obligatorio*
+	 -Prioriti = Medium
+	 -Test plan type = Release Funcional
+	 -Fix version = OFF Release (a menos que la tengamos)
+	 - Nada mas
+	 -*ATENTO*- Cuando se crea, ventana emergente. Click derecho, open linck. New tab.
+	 -Copiar codigo del test plan (final de URL) y colocar en Excel
+  
+- TEST EXECUTION (adentro del TEST PLAN)
+  -Create en jira 
+     -Proyect = XRAY
+     -Issue Type = Test Execution
+  -General
+     -Summary = Test execution - BFC - First round
+	 -Description (copia y pega del titulo por lo general)
+	 -Reporter = se completa solo
+	 -Assignee = No es obligatorio
+	 -Fix Version = OFF Release
+	 -Component = Portals.GBS (Si esta por default, borrar y colocar nuevamente)
+- CREATE
+	 -*ATENTO*- Cuando se crea, ventana emergente. Click derecho, open linck. New tab.
+	 -Copiar codigo(ID) del test execution (final de URL) y colocar en Excel
+	 
+	 
+-ASOCIAR SOLO UNA VEZ (Test plan con Test execution)
+  -En Test plan
+     -Test execution (está mas abajo) Add Test Execution
+	 -En "Add Test Execution" Poner ID, seleccionarlo y agregarlo
+	 
+- TEST CASE
+  -Se trabaja sobre las STORY
+  -Se crean adentro de la STORY
+  -En Test Coverage
+  	 -Ceate Test
+	 
+  -Se abre y copia del test case ya creado en otra alianza
+     -Copiamos titulo (editamos el ID de la story y la alianza)
+     -Proyect = XRAY
+	 -Issues Type = Test
+  -General
+     -Summary = Copiamos titulo (editamos el ID de la story y la alianza)
+	 -Test lvl = Medium
+	 -Reporter = Yo
+	 -Assignee = Yo
+	 -Fix Version = ya viene cargado
+	 -Component = Experience.GBS Portals.GBS
+	 -Link to story = ya viene cargado
+	 -Labels = ya viene cargado
+  -Test Details (los copiamos de la otra alianza)
+     -Expand
+	 -El primero es PRE condicion
+     -Los demas se copian, pegan y se comparan las story para ver diferencia
+	 -Abris las 2 story, comparar y modificar
+  -Add (una vez terminado)
+  -Create (se agrega dentro de la story que ya existe)
+     -Se agrega a Test Coverage
+-EXECUTION
+  -Abrir desde el test case que se creó
+  -Bajar gasta "Test Runs"
+     -Execute in
+	 -Existing Test Execution
+	 -Colocamos ID
+	 -Add
+	 -Ya estaria la ejecucion mas abajo
+  
+  
