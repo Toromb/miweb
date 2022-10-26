@@ -70,3 +70,75 @@
 	 -Ya estaria la ejecucion mas abajo
   
   
+  ----------------------------------------------------------------------------------------------------------------------
+  
+  
+  -- Consulta para tablas del portal -- 
+select * from portal.funding 
+where alliance_code  = 'BAN'; 
+
+-- CONSULTA PARA VER DESCRIPCION DE TABLAS-- 
+DESC PORTAL.FUNDING;
+
+-- Comodin de busqueda : Se consulta para buscar un fragmento de una palabra con el sigo '%', '$'  -- 
+select * from portal.funding
+where alliance_code like '%AN';
+
+select * from alliance_code = 'BAN';
+
+select *
+from portal.authorisation
+where ALLIANCE_CODE = 'BAN';
+
+SELECT *
+FROM PORTAL_USER.VW_CLEARING_WITH_REFUN
+
+SELECT * FROM ALLIANCE;
+
+SELECT * FROM PORTAL_ADM.APP_TO_ALLIANCE;
+
+select * from portal_user.vw_clearing where alliance_code='ban';
+
+select *
+from portal_adm.usr
+where alliance_code='ban';
+---------------------------------
+--obtener cnpj de X alliance (para el register desde merchant portal)
+
+select tax_id, name, external_merch_id, merch_id
+from portal.merchant
+where alliance_code = 'FDB';
+---------------------------------
+--regional tax id
+
+select regional_tax_id, tax_id
+from portal.merchant
+where alliance_code = 'afz';
+---------------------------------
+--forecast funding
+select *
+from vw_forecast_amount_agg
+where alliance_code = 'afz';
+
+--buscar merchant id
+select * from portal_user.vw_forecast_amount_agg
+where alliance_code = 'sip'
+and posting_date > to_date ('08/01/2020','dd/mm/yyyy');
+
+--con el merchant id buscar username (userid=username) pasword@1
+select * from portal_adm.usr_merch_access 
+where alliance_code = 'bin'
+and merch_id = '1237476746';
+
+--funding agreggated --> vw_funding_invoice_agg
+select * from portal.authorisation
+where alliance_code = 'bin';
+
+select * from vw_funding_invoice_agg
+where fia_alliance_code = 'afz'
+and fia_merch_id = '1237473792';
+
+select * from vw_funding_transaction
+where alliance_code = 'afz'
+and m_merch_id = '1237473792';
+  
